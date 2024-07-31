@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0AAB815-899E-4EC6-A8A2-46CB78B21992}|OnlineLibrary.Web\\OnlineLibrary.Web.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.web\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A0AAB815-899E-4EC6-A8A2-46CB78B21992}|OnlineLibrary.Web\\OnlineLibrary.Web.csproj|solutionrelative:onlinelibrary.web\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A14001FA-463C-4415-AE85-6BAC3C72A07B}|OnlineLibrary.Repository\\OnlineLibrary.Repository.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.repository\\implementation\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A14001FA-463C-4415-AE85-6BAC3C72A07B}|OnlineLibrary.Repository\\OnlineLibrary.Repository.csproj|solutionrelative:onlinelibrary.repository\\implementation\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0AAB815-899E-4EC6-A8A2-46CB78B21992}|OnlineLibrary.Web\\OnlineLibrary.Web.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.web\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0AAB815-899E-4EC6-A8A2-46CB78B21992}|OnlineLibrary.Web\\OnlineLibrary.Web.csproj|solutionrelative:onlinelibrary.web\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5262A377-C620-4FE9-897D-4EBEDD711AA4}|OnlineLibrary.Service\\OnlineLibrary.Service.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.service\\implementation\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5262A377-C620-4FE9-897D-4EBEDD711AA4}|OnlineLibrary.Service\\OnlineLibrary.Service.csproj|solutionrelative:onlinelibrary.service\\implementation\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A14001FA-463C-4415-AE85-6BAC3C72A07B}|OnlineLibrary.Repository\\OnlineLibrary.Repository.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.repository\\interface\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A14001FA-463C-4415-AE85-6BAC3C72A07B}|OnlineLibrary.Repository\\OnlineLibrary.Repository.csproj|solutionrelative:onlinelibrary.repository\\interface\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5262A377-C620-4FE9-897D-4EBEDD711AA4}|OnlineLibrary.Service\\OnlineLibrary.Service.csproj|c:\\users\\gjorg\\onedrive\\desktop\\personal projects\\onlinelibrary\\solution1\\onlinelibrary.service\\interface\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5262A377-C620-4FE9-897D-4EBEDD711AA4}|OnlineLibrary.Service\\OnlineLibrary.Service.csproj|solutionrelative:onlinelibrary.service\\interface\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Web\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineLibrary.Web\\Views\\Books\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Web\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "OnlineLibrary.Web\\Views\\Books\\Index.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABQAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T18:18:25.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Repository\\Interface\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "OnlineLibrary.Repository\\Interface\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Repository\\Interface\\IBookRepository.cs",
+              "RelativeToolTip": "OnlineLibrary.Repository\\Interface\\IBookRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T18:14:50.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Repository\\Implementation\\BookRepository.cs",
+              "RelativeDocumentMoniker": "OnlineLibrary.Repository\\Implementation\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Repository\\Implementation\\BookRepository.cs",
+              "RelativeToolTip": "OnlineLibrary.Repository\\Implementation\\BookRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T18:13:04.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Service\\Implementation\\BookService.cs",
+              "RelativeDocumentMoniker": "OnlineLibrary.Service\\Implementation\\BookService.cs",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Service\\Implementation\\BookService.cs",
+              "RelativeToolTip": "OnlineLibrary.Service\\Implementation\\BookService.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswCAAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T18:11:06.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Service\\Interface\\IBookService.cs",
+              "RelativeDocumentMoniker": "OnlineLibrary.Service\\Interface\\IBookService.cs",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Service\\Interface\\IBookService.cs",
+              "RelativeToolTip": "OnlineLibrary.Service\\Interface\\IBookService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T18:10:52.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Web\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "OnlineLibrary.Web\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\Solution1\\OnlineLibrary.Web\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "OnlineLibrary.Web\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T18:10:35.374Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

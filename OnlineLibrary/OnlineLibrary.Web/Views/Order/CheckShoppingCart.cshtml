@@ -1,0 +1,83 @@
+﻿@using Microsoft.Extensions.Options
+@using OnlineLibrary.Domain.Helper
+@model OnlineLibrary.Domain.Dto.ShoppingcartUserDto;
+@inject IOptions<StripeSettings> Stripe
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Book Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.books.Count(); i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.books[i].Book.Title)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => Model.books[i].Book.Author.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.books[i].Quantity)
+                </td>
+                <td>
+                    <a asp-action="DeleteFromShoppingCart" asp-controller="Order" asp-route-bookId="@Model.books[i].BookId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+    <th><b>Total:</b></th>
+
+    </tfoot>
+</table>
+
+@if (Model.member.IsStripedConnected)
+{
+    <form asp-controller="Order" asp-action="RentBooks">
+        <input type="submit" value="Rent Books" class="btn btn-success"
+        @(Model.books.Count() == 0 ? "disabled" : "") />
+    </form>
+}
+else
+{
+    <p>You need to pay for your membership before you can order!</p>
+    <form asp-controller="Order" asp-action="PayOrder" method="post">
+        <article>
+            <script src="https://checkout.stripe.com/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.PublishableKey"
+                    data-locale="auto"
+                    data-description="Online Library Payment"
+                    data-amount="@(250)"
+                    data-label="Pay for your membership">
+            </script>
+        </article>
+    </form>
+}
+
+<!--FinkiBiblioteka2002-->

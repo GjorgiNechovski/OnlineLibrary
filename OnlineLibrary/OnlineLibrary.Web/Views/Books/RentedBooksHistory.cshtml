@@ -1,0 +1,53 @@
+﻿@model List<OnlineLibrary.Domain.Domain.RentedBook>
+
+@{
+    ViewData["Title"] = "Rentedd Book History";
+}
+
+<h1>Rented Book History</h1>
+
+<p>
+</p>
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.Author.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateRented)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateReturned)
+                </td>
+                <td>
+                    @if (item.DateReturned != null)
+                    {
+                        <span>Returned</span>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.DueDate)
+                    }
+                </td>
+                <td>
+                    @if (item.DateReturned == null)
+                    {
+                        <form asp-controller="Books" asp-action="ReturnBook" method="post">
+                            <input type="hidden" name="bookId" value="@item.Book.Id" />
+                            <input type="submit" value="Return Book" />
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

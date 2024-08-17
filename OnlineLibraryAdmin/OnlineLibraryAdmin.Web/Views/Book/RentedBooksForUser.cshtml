@@ -1,0 +1,32 @@
+﻿@model List<OnlineLibraryAdmin.Web.Models.RentedBook>;
+
+@for(int i=0;i<Model.Count(); i++)
+{
+    if (i % 3 == 0)
+    {
+        @:<div class="row">
+    }
+
+    <div class="col-3 m-4">
+        <p><span>@Model[i].Book.Title</span> - <span>@Model[i].Book.Author.Name</span></p>
+        <p>Rented by: @Model[i].LibraryMember.Email</p>
+        <p>Rented on: @Model[i].DateRented</p>
+        <p>
+        Returned: 
+        @if (Model[i].DateReturned.HasValue)
+        {
+            @Model[i].DateReturned.Value.ToShortDateString()
+        }
+        else
+        {
+            <span>Due: @Model[i].DueDate.ToShortDateString()</span>
+        }
+        <p>Number of copies: @Model[i].Quantity</p>
+    </p>
+    </div>
+
+    if(i % 3 == 2)
+    {
+        @:</div>
+    }
+}

@@ -1,0 +1,69 @@
+﻿@model List<OnlineLibraryAdmin.Web.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Books</h1>
+<form asp-action="Index" method="get">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="Title" class="control-label">Title</label>
+                <input type="text" name="Title" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="AuthorId" class="control-label">Author</label>
+                <select name="AuthorId" class="form-control" asp-items="ViewBag.AuthorId">
+                    <option value="">-- Select Author --</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="InStock" class="control-label">In Stock</label>
+                <select class="form-control" name="InStock" id="InStock">
+                    <option value=""></option>
+                    <option value="true">In Stock</option>
+                    <option value="false">Out of Stock</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="submit" value="Filter" class="btn btn-primary form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@for(int i=0;i<Model.Count; i++)
+{
+    var book = Model[i];
+    if(i % 3 == 0)
+    {
+        @:<div class="row">
+    }
+    <div class="col-3 m-4">
+
+        <div class="card">
+            <img class="card-img-top" src="@book.BookCoverUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@book.Title</h5>
+                <h4><span>@book.Author.Name</span> <span>@book.Author.LastName</span></h4>
+                <p class="card-text">Number of pages: @book.Pages</p>
+
+                   
+            </div>
+
+        </div>
+    </div>
+
+    if(i % 3 == 2)
+    {
+        @:</div>
+    }
+    }
+</div>

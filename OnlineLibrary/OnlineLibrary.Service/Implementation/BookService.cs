@@ -40,7 +40,7 @@ namespace OnlineLibrary.Service.Implementation
             if (id != null)
                 return bookRepository.GetById(id);
 
-            throw new Exception("Book not found! ");
+            throw new NotFoundException("Book not found! ");
         }
 
         public List<RentedBook> GetRentedBooksForUser(string userId)

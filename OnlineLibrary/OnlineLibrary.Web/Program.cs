@@ -6,6 +6,7 @@ using OnlineLibrary.Repository.Interface;
 using OnlineLibrary.Service.Implementation;
 using OnlineLibrary.Service.Interface;
 using OnlineLibrary.Domain.Helper;
+using OnlineLibrary.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,7 @@ builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Str
 
 
 var app = builder.Build();
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -65,3 +67,6 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+public partial class Program { } //For testing purposes
+

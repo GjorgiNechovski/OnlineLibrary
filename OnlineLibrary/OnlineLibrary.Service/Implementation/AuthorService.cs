@@ -1,4 +1,5 @@
 ﻿using OnlineLibrary.Domain.Domain;
+using OnlineLibrary.Domain.Exceptions;
 using OnlineLibrary.Repository.Interface;
 using OnlineLibrary.Service.Interface;
 
@@ -32,7 +33,7 @@ namespace OnlineLibrary.Service.Implementation
             if (id != null)
                 return authorRepository.GetById(id);
 
-            throw new Exception("Author not found! ");
+            throw new NotFoundException("Author not found! ");
         }
     }
 }

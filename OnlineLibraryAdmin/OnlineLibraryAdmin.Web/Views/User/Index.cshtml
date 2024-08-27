@@ -1,10 +1,12 @@
 ﻿@model List<OnlineLibraryAdmin.Web.Models.LibraryMember>;
 
+<h1>Import users</h1>
 <form asp-action="ImportAllUsers" method="post" enctype="multipart/form-data">
     <input type="file" name="file" />
     <input type="submit" />
 </form>
 
+<h1>Current users</h1>
 
 @for(int i=0;i<Model.Count(); i++)
 {
@@ -18,6 +20,7 @@
         <p>@Model[i].Name</p>
         <p>@Model[i].LastName</p>
         <p>@Model[i].Email</p>
+        <p><a class="btn btn-outline-primary" asp-action="RentedBooksForUser" asp-controller="Book" asp-route-id="@Model[i].Id">See all user's rented books</a></p>
     </div>
 
     if(i % 3 == 2)

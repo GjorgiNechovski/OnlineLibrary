@@ -38,8 +38,7 @@
               "RelativeToolTip": "OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T16:34:57.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T16:34:57.693Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
               "ToolTip": "C:\\Users\\gjorg\\OneDrive\\Desktop\\Personal Projects\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
               "RelativeToolTip": "OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-27T16:37:41.484Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAAwDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T19:51:53.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T19:51:53.026Z"
             }
           ]
         }

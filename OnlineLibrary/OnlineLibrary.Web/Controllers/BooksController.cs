@@ -34,6 +34,11 @@ namespace OnlineLibrary.Web.Controllers
                 return NotFound();
             }
 
+            if (TempData.ContainsKey("ErrorMessage"))
+            {
+                ViewBag.ErrorMessage = TempData["ErrorMessage"];
+            }
+
             return View(book);
         }
 
@@ -135,11 +140,11 @@ namespace OnlineLibrary.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult ReturnBook(Guid bookId)
+        public ActionResult ReturnBook(Guid rentedId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            bookService.ReturnBook(userId, bookId);
+            bookService.ReturnBook(userId, rentedId);
 
             return RedirectToAction("RentedBooksHistory", "Books");
         }

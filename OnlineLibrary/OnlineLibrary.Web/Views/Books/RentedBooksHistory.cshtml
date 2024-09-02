@@ -42,7 +42,7 @@
                     @if (item.DateReturned == null)
                     {
                         <form asp-controller="Books" asp-action="ReturnBook" method="post">
-                            <input type="hidden" name="bookId" value="@item.Book.Id" />
+                            <input type="hidden" name="rentedId" value="@item.RentId" />
                             <input type="submit" value="Return Book" />
                         </form>
                     }

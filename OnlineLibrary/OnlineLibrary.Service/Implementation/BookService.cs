@@ -50,11 +50,21 @@ namespace OnlineLibrary.Service.Implementation
             return user.RentedBooks.ToList();
         }
 
-        public void ReturnBook(string userId, Guid bookId)
+        public void ReturnBook(string userId, Guid rentedId)
         {
             var user = userRepository.GetUserWithOnlyRentedBooks(userId) ?? throw new NotFoundException("We could not locate the user with the given id!");
-            var rentedBook = user.RentedBooks.FirstOrDefault(book=>book.BookId.Equals(bookId));
-            var book = bookRepository.GetById(bookId);
+
+            var rentedBook = user.RentedBooks.FirstOrDefault(book => book.RentId.Equals(rentedId))
+                             ?? throw new NotFoundException("The rented book could not be located!");
+
+            if (rentedBook.DateReturned != null)
+            {
+                throw new InvalidOperationException("This book has already been returned.");
+            }
+
+
+            var book = bookRepository.GetById(rentedBook.BookId)
+                       ?? throw new NotFoundException("The book could not be located in the repository!");
 
             rentedBook.DateReturned = DateTime.Now;
             book.QuantityInInventory += rentedBook.Quantity;

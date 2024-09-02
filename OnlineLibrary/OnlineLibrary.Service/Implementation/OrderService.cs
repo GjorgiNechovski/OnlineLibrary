@@ -27,6 +27,11 @@ namespace OnlineLibrary.Service.Implementation
 
             var book = bookRepository.GetById(bookId) ?? throw new NotFoundException("Book not found!");
 
+            if(book.QuantityInInventory <  quantity)
+            {
+                throw new NowEnoughBooksException("There aren't enough books to rent");
+            }
+
             var bookInCart = cart.Books.FirstOrDefault(bic => bic.BookId == bookId);
 
             if (bookInCart != null)
@@ -97,6 +102,7 @@ namespace OnlineLibrary.Service.Implementation
                 {
                     RentedBook rentedBook = new()
                     {
+                        RentId = Guid.NewGuid(),
                         BookId = bookInCart.BookId,
                         Book = bookInCart.Book,
                         LibraryMemberId = userId,

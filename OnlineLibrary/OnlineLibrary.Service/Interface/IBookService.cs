@@ -11,6 +11,6 @@ namespace OnlineLibrary.Service.Interface
         void EditBook(Book book);
         void DeleteBook(Guid id);
         List<RentedBook> GetRentedBooksForUser(string userId);
-        void ReturnBook(string userId, Guid bookId);
+        void ReturnBook(string userId, Guid rentedId);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineLibrary.Domain.Dto;
+using OnlineLibrary.Domain.Exceptions;
 using OnlineLibrary.Service.Interface;
 using System.Security.Claims;
 
@@ -25,7 +26,16 @@ namespace OnlineLibrary.Web.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            orderService.AddToCart(bookId, quantity, userId);
+            try
+            {
+                orderService.AddToCart(bookId, quantity, userId);
+
+            }
+            catch(NowEnoughBooksException e)
+            {
+                TempData["ErrorMessage"] = e.Message;
+                return RedirectToAction("Details", "Books", new { id = bookId });
+            }
 
             return RedirectToAction("Index", "Books");
         }

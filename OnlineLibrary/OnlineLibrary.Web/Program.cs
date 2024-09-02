@@ -7,6 +7,8 @@ using OnlineLibrary.Service.Implementation;
 using OnlineLibrary.Service.Interface;
 using OnlineLibrary.Domain.Helper;
 using OnlineLibrary.Web;
+using Quartz;
+using OnlineLibrary.Service.Jobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +39,17 @@ builder.Services.AddTransient(typeof(IFileService), typeof(FileService));
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
+builder.Services.AddQuartz(q =>
+{
+    q.UseMicrosoftDependencyInjectionJobFactory();
 
+    // Register the job
+    q.AddJob<SendReminderEmailsJob>(opts => opts.WithIdentity("SendReminderEmailsJob"));
+    q.AddTrigger(opts => opts
+        .ForJob("SendReminderEmailsJob")
+        .WithIdentity("SendReminderEmailsJob-trigger")
+        .WithCronSchedule("0 0 9 * * ?"));
+});
 
 var app = builder.Build();
 app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
@@ -67,6 +79,3 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
-
-public partial class Program { } //For testing purposes
-

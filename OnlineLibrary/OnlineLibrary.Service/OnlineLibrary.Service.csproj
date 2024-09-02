@@ -12,15 +12,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="MimeKit" Version="4.7.1" />
+    <PackageReference Include="Quartz" Version="3.13.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OnlineLibrary.Domain\OnlineLibrary.Domain.csproj" />
     <ProjectReference Include="..\OnlineLibrary.Repository\OnlineLibrary.Repository.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Jobs\" />
   </ItemGroup>
 
 </Project>

@@ -1,53 +1,99 @@
 ﻿@model List<OnlineLibrary.Domain.Domain.RentedBook>
 
 @{
-    ViewData["Title"] = "Rentedd Book History";
+    ViewData["Title"] = "Rented Book History";
 }
 
-<h1>Rented Book History</h1>
+<style>
+    .rented-book-container {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #e3f2fd;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 
-<p>
-</p>
-<table class="table">
-    <tbody>
-        @foreach (var item in Model)
-        {
+    .rented-book-header {
+        color: midnightblue;
+        margin-bottom: 20px;
+    }
+
+    .table-custom {
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+        color: midnightblue;
+    }
+
+    .btn-return-book {
+        background-color: #5bc0de; /* Medium blue color */
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.3rem 0.75rem;
+        font-size: 0.875rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-return-book:hover {
+        background-color: #31b0d5; /* Darker shade for hover effect */
+    }
+
+</style>
+
+<div class="rented-book-container">
+    <div class="rented-book-header">
+        <h1>Rented Book History</h1>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Book.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Book.Author.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateRented)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateReturned)
-                </td>
-                <td>
-                    @if (item.DateReturned != null)
-                    {
-                        <span>Returned</span>
-                    }
-                    else
-                    {
-                        @Html.DisplayFor(modelItem => item.DueDate)
-                    }
-                </td>
-                <td>
-                    @if (item.DateReturned == null)
-                    {
-                        <form asp-controller="Books" asp-action="ReturnBook" method="post">
-                            <input type="hidden" name="rentedId" value="@item.RentId" />
-                            <input type="submit" value="Return Book" />
-                        </form>
-                    }
-                </td>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Author</th>
+                <th>Date Rented</th>
+                <th>Date Returned</th>
+                <th>Due Date / Status</th>
+                <th>Action</th> <!-- Added Action column for the Return Book button -->
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Book.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Book.Author.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DateRented)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DateReturned)</td>
+                    <td>
+                        @if (item.DateReturned != null)
+                        {
+                            <span>Returned</span>
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.DueDate)
+                        }
+                    </td>
+                    <td>
+                        @if (item.DateReturned == null) 
+                        {
+                            <form asp-controller="Books" asp-action="ReturnBook" method="post">
+                                <input type="hidden" name="rentedId" value="@item.RentId" />
+                                <input type="submit" value="Return Book" class="btn-return-book" />
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -29,15 +29,18 @@ namespace OnlineLibrary.Web.Controllers
             try
             {
                 orderService.AddToCart(bookId, quantity, userId);
-
+                return RedirectToAction("Index", "Books");
             }
-            catch(NowEnoughBooksException e)
+            catch (ArgumentException ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction("Details", "Books", new { id = bookId });
+            }
+            catch (NowEnoughBooksException e)
             {
                 TempData["ErrorMessage"] = e.Message;
                 return RedirectToAction("Details", "Books", new { id = bookId });
             }
-
-            return RedirectToAction("Index", "Books");
         }
 
         public IActionResult DeleteFromShoppingCart(Guid bookId)

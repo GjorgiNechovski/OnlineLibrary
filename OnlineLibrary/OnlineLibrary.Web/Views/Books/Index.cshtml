@@ -4,9 +4,130 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Books</h1>
+<style>
+    .card-custom {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #e3f2fd;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .card-body-custom {
+        padding: 15px;
+        flex: 1;
+    }
+
+    .card-footer-custom {
+        padding: 15px;
+        background-color: #e3f2fd;
+        border-top: 1px solid #d0d0d0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .btn-info-custom {
+        background-color: #17a2b8;
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-info-custom:hover {
+        background-color: #117a8b;
+    }
+
+    .btn-primary-custom {
+        background-color: #007bff; 
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-primary-custom:hover {
+        background-color: #0056b3; /* Darker shade for hover effect */
+    }
+
+    .btn-edit-custom {
+        background-color: #4a90e2; /* Light blue color for Edit button */
+        color: #fff;
+    }
+
+    .btn-edit-custom:hover {
+        background-color: #357abd; /* Darker shade for hover effect */
+    }
+
+    .btn-details-custom {
+        background-color: #5bc0de; /* Medium blue color for Rent the Book button */
+        color: #fff;
+        width: 100%; /* Full width */
+    }
+
+    .btn-details-custom:hover {
+        background-color: #31b0d5; /* Darker shade for hover effect */
+    }
+
+    .btn-danger-custom {
+        background-color: #ff6f61; /* Warning red for Delete button */
+        color: #fff;
+    }
+
+    .btn-danger-custom:hover {
+        background-color: #e55d50; /* Darker shade for hover effect */
+    }
+
+    .btn-outline-secondary-custom {
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #6c757d;
+        color: #6c757d;
+        background-color: transparent;
+        width: 18%; /* Fixed button width */
+        height: 36px;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-outline-secondary-custom:hover {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .card-footer-custom .btn-group {
+        margin-right: 20px; /* Space between Edit and Delete buttons */
+    }
+
+    .card-body-custom {
+        margin-bottom: 60px; /* Space above the Rent the Book button */
+    }
+</style>
+
+<h1 style="color: midnightblue;">Books</h1>
+
 <form asp-action="Index" method="get">
-    <div class="row">
+    <div class="row mb-4">
         <div class="col-md-3">
             <div class="form-group">
                 <label for="Title" class="control-label">Title</label>
@@ -31,48 +152,52 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <input type="submit" value="Filter" class="btn btn-primary form-control" />
+        <div class="col-md-3 d-flex align-items-end">
+            <div class="form-group w-100">
+                <input type="submit" value="Filter" class="btn btn-info-custom w-100" />
             </div>
         </div>
     </div>
 </form>
 
-<p>
-</p>
+<p></p>
+
 <div class="container">
     <div class="m-3">
-        <a class="btn btn-success" asp-controller="Books" asp-action="Create">Add new book</a>
+        <a class="btn btn-info-custom m-4" asp-controller="Books" asp-action="Create">Add new book</a>
     </div>
 
-    @for(int i=0;i<Model.Count; i++)
-    {
-        var book = Model[i];
-        if(i % 3 == 0)
+    <div class="row">
+        @for(int i = 0; i < Model.Count; i++)
         {
-            @:<div class="row">
-        }
-        <div class="col-3 m-4">
-
-            <div class="card">
-                <img class="card-img-top" src="@book.BookCoverUrl" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">@book.Title</h5>
-                    <h4><span>@book.Author.Name</span> <span>@book.Author.LastName</span></h4>
-                    <p class="card-text">Number of pages: @book.Pages</p>
-
-                    <a asp-controller="Books" asp-action="Edit" asp-route-id="@book.Id" class="btn btn-info">Edit</a>
-                    <a asp-controller="Books" asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger">Delete</a>
-                    <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id" class="btn btn-success">Details</a>
+            var book = Model[i];
+            if(i % 4 == 0 && i != 0)
+            {
+                @:</div><div class="row">
+            }
+            <div class="col-md-3 mb-4">
+                <div class="card card-custom">
+                    <img class="card-img-top" src="@book.BookCoverUrl" alt="Card image cap">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title">@book.Title</h5>
+                        <h4><span>@book.Author.Name</span> <span>@book.Author.LastName</span></h4>
+                        <p class="card-text">Number of pages: @book.Pages</p>
+                    </div>
+                    <div class="card-footer card-footer-custom">
+                        <div class="btn-group">
+                            <a asp-controller="Books" asp-action="Edit" asp-route-id="@book.Id" class="btn btn-edit-custom">Edit</a>
+                            <a asp-controller="Books" asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger-custom">Delete</a>
+                        </div>
+                        <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id" class="btn btn-details-custom">Rent the Book</a>
+                    </div>
                 </div>
-
             </div>
-        </div>
-
-        if(i % 3 == 2)
-        {
-            @:</div>
         }
-    }
+    </div>
+</div>
+
+<div class="d-flex justify-content-end mb-4 mt-4">
+    <a class="btn btn-outline-secondary-custom" asp-controller="Home" asp-action="Index">
+        Back
+    </a>
 </div>

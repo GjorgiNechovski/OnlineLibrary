@@ -1,8 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Online Library Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevents scrolling */
+    }
+
+    .full-height {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .btn-info-custom {
+        background-color: #17a2b8;
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    .btn-info-custom:hover {
+            background-color: #117a8b;
+     }
+
+    
+</style>
+
+<div class="full-height">
+    <div class="text-center">
+        <h1 style="color: midnightblue;">Welcome to the Online Library</h1>
+        <p>Your gateway to endless knowledge and adventure. Explore our collection of books and borrow your favorites today.</p>
+        <a class="btn btn-info-custom m-4" href="/Books" role="button">Browse the Library</a>
+    </div>
 </div>

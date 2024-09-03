@@ -3,81 +3,139 @@
 @model OnlineLibrary.Domain.Dto.ShoppingcartUserDto;
 @inject IOptions<StripeSettings> Stripe
 
-
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<style>
+    .container-custom {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #e3f2fd;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 
+    .header-custom {
+        color: midnightblue;
+        margin-bottom: 20px;
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                #
-            </th>
-            <th>
-                Book Title
-            </th>
-            <th>
-                Author
-            </th>
-            <th>
-                Quantity
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (int i = 0; i < Model.books.Count(); i++)
-        {
-            <tr>
-                <td>@(i + 1)</td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.books[i].Book.Title)
-                </td>
+    .table-custom {
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
 
-                <td>
-                    @Html.DisplayFor(modelItem => Model.books[i].Book.Author.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.books[i].Quantity)
-                </td>
-                <td>
-                    <a asp-action="DeleteFromShoppingCart" asp-controller="Order" asp-route-bookId="@Model.books[i].BookId">Delete</a>
-                </td>
-            </tr>
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+        color: midnightblue;
+    }
+
+    .btn-info-custom {
+        background-color: #17a2b8;
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+        .btn-info-custom:hover {
+            background-color: #117a8b;
         }
-    </tbody>
-    <tfoot>
-    <th><b>Total:</b></th>
 
-    </tfoot>
-</table>
+    .btn-success-custom {
+        background-color: #28a745; /* Green color for Rent Books button */
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+    }
 
-@if (Model.member.IsStripedConnected)
-{
-    <form asp-controller="Order" asp-action="RentBooks">
-        <input type="submit" value="Rent Books" class="btn btn-success"
-        @(Model.books.Count() == 0 ? "disabled" : "") />
-    </form>
-}
-else
-{
-    <p>You need to pay for your membership before you can order!</p>
-    <form asp-controller="Order" asp-action="PayOrder" method="post">
-        <article>
-            <script src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="@Stripe.Value.PublishableKey"
-                    data-locale="auto"
-                    data-description="Online Library Payment"
-                    data-amount="@(250)"
-                    data-label="Pay for your membership">
-            </script>
-        </article>
-    </form>
-}
+        .btn-success-custom:hover {
+            background-color: #1e7e34; /* Darker shade for hover effect */
+        }
 
-<!--FinkiBiblioteka2002-->
+    .btn-danger-custom {
+        background-color: #ff6f61; /* Warning red for Delete button */
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+        .btn-danger-custom:hover {
+            background-color: #e55d50; /* Darker shade for hover effect */
+        }
+
+</style>
+
+<div class="container-custom">
+    <div class="header-custom">
+        <h1>Shopping Cart</h1>
+    </div>
+
+    <table class="table table-striped table-bordered table-custom">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.books.Count(); i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Html.DisplayFor(modelItem => Model.books[i].Book.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => Model.books[i].Book.Author.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => Model.books[i].Quantity)</td>
+                    <td>
+                        <a asp-action="DeleteFromShoppingCart" asp-controller="Order" asp-route-bookId="@Model.books[i].BookId" class="btn btn-danger-custom">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th><b>Total:</b></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    @if (Model.member.IsStripedConnected)
+    {
+        <form asp-controller="Order" asp-action="RentBooks">
+            <input type="submit" value="Rent Books" class="btn btn-success-custom m-4"
+            @(Model.books.Count() == 0 ? "disabled" : "") />
+        </form>
+    }
+    else
+    {
+        <p>You need to pay for your membership before you can order!</p>
+        <form asp-controller="Order" asp-action="PayOrder" method="post">
+            <article>
+                <script src="https://checkout.stripe.com/checkout.js"
+                        class="stripe-button"
+                        data-key="@Stripe.Value.PublishableKey"
+                        data-locale="auto"
+                        data-description="Online Library Payment"
+                        data-amount="@(250)"
+                        data-label="Pay for your membership">
+                </script>
+            </article>
+        </form>
+    }
+</div>

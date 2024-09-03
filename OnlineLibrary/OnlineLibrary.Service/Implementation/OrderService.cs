@@ -13,6 +13,11 @@ namespace OnlineLibrary.Service.Implementation
 
         public void AddToCart(Guid bookId, int quantity, string userId)
         {
+            if (quantity <= 0)
+            {
+                throw new ArgumentException("Quantity must be 1 or more.", nameof(quantity));
+            }
+
             var user = userRepository.GetUserWithOnlyShoppingCart(userId) ?? throw new NotFoundException("We could not locate the user with the given id!");
             var cart = user.BookCart;
 

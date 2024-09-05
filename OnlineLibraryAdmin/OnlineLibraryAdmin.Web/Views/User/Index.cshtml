@@ -1,30 +1,46 @@
 ﻿@model List<OnlineLibraryAdmin.Web.Models.LibraryMember>;
 
-<h1>Import users</h1>
-<form asp-action="ImportAllUsers" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" />
-    <input type="submit" />
-</form>
+<h1 class="text-center fw-bold" style="color: midnightblue;">Manage Users</h1>
+<a asp-action="ImportUsersForm" asp-controller="User" class="btn btn-info m-4">Import Users</a>
 
-<h1>Current users</h1>
-
-@for(int i=0;i<Model.Count(); i++)
-{
-    if (i % 3 == 0)
-    {
-        @:<div class="row">
-    }
-
-    <div class="col-3 m-4">
-        <p>@Model[i].Id</p>
-        <p>@Model[i].Name</p>
-        <p>@Model[i].LastName</p>
-        <p>@Model[i].Email</p>
-        <p><a class="btn btn-outline-primary" asp-action="RentedBooksForUser" asp-controller="Book" asp-route-id="@Model[i].Id">See all user's rented books</a></p>
+<div class="card" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #e3f2fd;">
+    <div class="card-header" style="background-color: #0056b3; color: #fff; padding: 15px; border-radius: 10px 10px 0 0;">
+        <h2 class="h5 mb-0">Current Users</h2>
     </div>
-
-    if(i % 3 == 2)
-    {
-        @:</div>
-    }
-}
+    <div class="card-body p-0">
+        <table class="table" style="width: 100%; border-collapse: separate; border-spacing: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
+            <thead style="background-color: #003d7a; color: #e3f2fd; text-align: left; border-bottom: 2px solid #003d7a;">
+                <tr>
+                    <th style="padding: 15px; border: 1px solid #003d7a; border-radius: 10px 0 0 10px;">UserId</th>
+                    <th style="padding: 15px; border: 1px solid #003d7a;">First Name</th>
+                    <th style="padding: 15px; border: 1px solid #003d7a;">Last Name</th>
+                    <th style="padding: 15px; border: 1px solid #003d7a;">Email</th>
+                    <th style="padding: 15px; border: 1px solid #003d7a; border-radius: 0 10px 10px 0;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <tr style="background-color: #fff; border-bottom: 1px solid #003d7a;">
+                        <td style="padding: 15px; border: 1px solid #003d7a;">@Model[i].Id</td>
+                        <td style="padding: 15px; border: 1px solid #003d7a;">@Model[i].Name</td>
+                        <td style="padding: 15px; border: 1px solid #003d7a;">@Model[i].LastName</td>
+                        <td style="padding: 15px; border: 1px solid #003d7a;">@Model[i].Email</td>
+                        <td style="padding: 15px; border: 1px solid #003d7a;">
+                            <a class="btn btn-outline-dark btn-sm" asp-action="RentedBooksForUser" asp-controller="Book" asp-route-id="@Model[i].Id" >See user rented books</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<div class="d-flex justify-content-end mb-4 mt-4">
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;" asp-controller="Home" asp-action="Index">
+        Back
+    </a>
+    <a class="btn btn-outline-secondary " style="border-radius: 0.25rem; padding: 0.5rem 1rem;margin-left:3vh;" asp-controller="Book" asp-action="Index">
+        View Books
+    </a>
+</div>

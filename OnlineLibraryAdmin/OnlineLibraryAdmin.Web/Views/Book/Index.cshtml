@@ -4,33 +4,41 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Books</h1>
-
-@for(int i=0;i<Model.Count; i++)
+<h1 style="color:midnightblue;" class="text-center fw-bold mb-5">All Books</h1>
+@for(int i = 0; i < Model.Count; i++)
 {
     var book = Model[i];
-    if(i % 3 == 0)
+    if (i % 3 == 0)
     {
-        @:<div class="row">
+        @:<div class="row mb-4">
     }
-    <div class="col-3 m-4">
+    <div class="col-md-4 mb-4">
+        <div class="card" style="border: none; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <img class="card-img-top" src="@book.BookCoverUrl" alt="Cover image for @book.Title" style="border-radius: 15px 15px 0 0; object-fit: cover; height: 200px;">
 
-        <div class="card">
-            <img class="card-img-top" src="@book.BookCoverUrl" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@book.Title</h5>
-                <h4><span>@book.Author.Name</span> <span>@book.Author.LastName</span></h4>
-                <p class="card-text">Number of pages: @book.Pages</p>
-
-                   
+            <div class="card-body" style="background-color: #f8f9fa; border-radius: 0 0 15px 15px;">
+                <h5 class="card-title" style="color: #333; font-size: 1.25rem;">@book.Title</h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: 1rem;">
+                    by @book.Author.Name @book.Author.LastName
+                </h6>
+                <p class="card-text" style="font-size: 0.875rem; color: #555;">
+                    Number of pages: @book.Pages
+                </p>
             </div>
-
         </div>
     </div>
 
-    if(i % 3 == 2)
+    if (i % 3 == 2 || i == Model.Count - 1)
     {
         @:</div>
     }
-    }
-</div>
+    
+}
+<div class="d-flex justify-content-end mb-4">
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;" asp-controller="Home" asp-action="Index">
+        Back
+    </a>
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;margin-left:3vh;" asp-controller="User" asp-action="Index">
+        View Users
+    </a>
+    </div>

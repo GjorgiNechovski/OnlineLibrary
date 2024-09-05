@@ -12,10 +12,14 @@ namespace OnlineLibraryAdmin.Web.Controllers
             onlineLibraryUrl = configuration["OnlineLibraryUrl"];
         }
 
+        public async Task<IActionResult> ImportUsersForm()
+        {
+            return View();
+        }
         public async Task<IActionResult> Index()
         {
             var data = await GetAllMembers();
-            
+
             return View(data);
         }
 
@@ -80,5 +84,7 @@ namespace OnlineLibraryAdmin.Web.Controllers
 
             return await response.Content.ReadAsAsync<List<LibraryMember>>();
         }
+
+
     }
 }

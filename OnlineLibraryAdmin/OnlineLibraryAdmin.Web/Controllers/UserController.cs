@@ -48,7 +48,7 @@ namespace OnlineLibraryAdmin.Web.Controllers
             return File(content, contentType, fileName);
         }
 
-        public async Task ImportAllUsers(IFormFile file)
+        public async Task<IActionResult> ImportAllUsers(IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
@@ -69,6 +69,8 @@ namespace OnlineLibraryAdmin.Web.Controllers
             response.EnsureSuccessStatusCode();
 
             fileStream.Dispose();
+
+            return RedirectToAction("Index", "User");
         }
 
         private async Task<List<LibraryMember>> GetAllMembers()

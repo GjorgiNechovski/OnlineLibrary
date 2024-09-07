@@ -12,10 +12,14 @@ namespace OnlineLibraryAdmin.Web.Controllers
             onlineLibraryUrl = configuration["OnlineLibraryUrl"];
         }
 
+        public async Task<IActionResult> ImportUsersForm()
+        {
+            return View();
+        }
         public async Task<IActionResult> Index()
         {
             var data = await GetAllMembers();
-            
+
             return View(data);
         }
 
@@ -48,7 +52,7 @@ namespace OnlineLibraryAdmin.Web.Controllers
             return File(content, contentType, fileName);
         }
 
-        public async Task ImportAllUsers(IFormFile file)
+        public async Task<IActionResult> ImportAllUsers(IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
@@ -69,6 +73,8 @@ namespace OnlineLibraryAdmin.Web.Controllers
             response.EnsureSuccessStatusCode();
 
             fileStream.Dispose();
+
+            return RedirectToAction("Index", "User");
         }
 
         private async Task<List<LibraryMember>> GetAllMembers()
@@ -78,5 +84,7 @@ namespace OnlineLibraryAdmin.Web.Controllers
 
             return await response.Content.ReadAsAsync<List<LibraryMember>>();
         }
+
+
     }
 }

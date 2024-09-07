@@ -1,32 +1,69 @@
 ﻿@model List<OnlineLibraryAdmin.Web.Models.RentedBook>;
 
-@for(int i=0;i<Model.Count(); i++)
+
+
+<h1 style="color:midnightblue;" class="text-center fw-bold mb-5">Rented Books</h1>
+@if (Model.Count == 0)
 {
-    if (i % 3 == 0)
-    {
-        @:<div class="row">
-    }
-
-    <div class="col-3 m-4">
-        <p><span>@Model[i].Book.Title</span> - <span>@Model[i].Book.Author.Name</span></p>
-        <p>Rented by: @Model[i].LibraryMember.Email</p>
-        <p>Rented on: @Model[i].DateRented</p>
-        <p>
-        Returned: 
-        @if (Model[i].DateReturned.HasValue)
-        {
-            @Model[i].DateReturned.Value.ToShortDateString()
-        }
-        else
-        {
-            <span>Due: @Model[i].DueDate.ToShortDateString()</span>
-        }
-        <p>Number of copies: @Model[i].Quantity</p>
-    </p>
+    <div class="alert alert-info text-center" role="alert" style="font-size: 1.25rem;margin-top:10vh;">
+        There are no rented books at the moment.
     </div>
-
-    if(i % 3 == 2)
+    <div class="mt-5 container">
+    <div class="d-flex justify-content-end mb-4">
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;" asp-controller="User" asp-action="Index">
+        Back to Users
+    </a>
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;margin-left:3vh;" asp-controller="Book" asp-action="Index">
+        View Books
+    </a>
+    </div>
+    </div>
+}
+else
+{
+    @for(int i = 0; i < Model.Count(); i++)
     {
-        @:</div>
+        if (i % 3 == 0)
+        {
+            @:<div class="row mb-4">
+        }
+
+        <div class="col-md-4 mb-4">
+            <div class="card" style="border: none; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="@Model[i].Book.BookCoverUrl" class="card-img-top" alt="@Model[i].Book.Title" style="object-fit: cover; height: 200px; width: 100%; border-radius: 15px 15px 0 0;">
+
+                <div class="card-body" style="background-color: #f7f9fc; border-radius: 0 0 15px 15px;">
+                    <h5 class="card-title" style="color: #333;">@Model[i].Book.Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">by @Model[i].Book.Author.Name</h6>
+                    <p><strong>Rented by:</strong> @Model[i].LibraryMember.Email</p>
+                    <p><strong>Rented on:</strong> @Model[i].DateRented.ToShortDateString()</p>
+                    <p><strong>Returned:</strong>
+                        @if (Model[i].DateReturned.HasValue)
+                        {
+                            @Model[i].DateReturned.Value.ToShortDateString()
+                        }
+                        else
+                        {
+                            <span>Due: @Model[i].DueDate.ToShortDateString()</span>
+                        }
+                    </p>
+                    <p><strong>Number of copies:</strong> @Model[i].Quantity</p>
+                </div>
+            </div>
+        </div>
+
+        if (i % 3 == 2 || i == Model.Count() - 1)
+        {
+            @:</div>
+        }
     }
+    <div class="d-flex justify-content-end mb-4">
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;" asp-controller="User" asp-action="Index">
+        Back to Users
+    </a>
+    <a class="btn btn-outline-secondary" style="border-radius: 0.25rem; padding: 0.5rem 1rem;margin-left:3vh;" asp-controller="Book" asp-action="Index">
+        View Books
+    </a>
+    </div>
+    
 }

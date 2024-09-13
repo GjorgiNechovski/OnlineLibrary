@@ -36,6 +36,9 @@ builder.Services.AddTransient(typeof(IOrderService), typeof(OrderService));
 builder.Services.AddTransient(typeof(IEmailService), typeof(EmailService));
 builder.Services.AddTransient(typeof(IUserService), typeof(UserService));
 builder.Services.AddTransient(typeof(IFileService), typeof(FileService));
+builder.Services.AddHttpClient<IFoodDeliveryService, FoodDeliveryService>();
+builder.Services.AddTransient(typeof(IFoodDeliveryService), typeof(FoodDeliveryService));
+
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 

@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\models\\librarymember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\models\\librarymember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|c:\\users\\frosina\\onlinelibrary\\onlinelibraryadmin\\onlinelibraryadmin.web\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5162B02F-03B1-47B4-945C-4E98833FBA9A}|OnlineLibraryAdmin.Web\\OnlineLibraryAdmin.Web.csproj|solutionrelative:onlinelibraryadmin.web\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,19 +75,91 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T16:34:57.693Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Program.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Program.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T17:17:12.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Models\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Models\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:57:50.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Models\\Author.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\Author.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Models\\Author.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:57:47.606Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAArwD8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T19:51:53.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LibraryMember.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\LibraryMember.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Models\\LibraryMember.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\LibraryMember.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Models\\LibraryMember.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:56:13.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Models\\Book.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Models\\Book.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Models\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T14:56:09.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\UserController.cs",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Controllers\\UserController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAA3wEAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T17:25:09.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
@@ -71,20 +167,19 @@
               "RelativeToolTip": "OnlineLibraryAdmin.Web\\Views\\User\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-27T16:37:41.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T16:37:41.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
-              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Controllers\\BookController.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAwDwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T19:51:53.026Z"
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Frosina\\OnlineLibrary\\OnlineLibraryAdmin\\OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "OnlineLibraryAdmin.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-27T16:34:57.693Z"
             }
           ]
         }

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OnlineLibrary.Domain.FoodDeliveryDomain.Order>
+
+@{
+    ViewData["Title"] = "Active Orders";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var order in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #007bff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div class="card-body" style="background-color: #f8f9fa; color: #333;">
+                        <h5 class="card-title">Order by: @order.Owner.FirstName @order.Owner.LastName</h5>
+                        <p class="card-text">Address: @order.address</p>
+                        <p class="card-text">Total Price: @order.totalPrice</p>
+                    </div>
+                    <div class="card-footer" style="background-color: #007bff; color: #fff; text-align: center;">
+                        <a asp-controller="FoodDelivery" asp-action="Details" asp-route-id="@order.Id" class="btn" style="background-color: #007bff; border: none; color: #fff;">View Dishes in Order</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

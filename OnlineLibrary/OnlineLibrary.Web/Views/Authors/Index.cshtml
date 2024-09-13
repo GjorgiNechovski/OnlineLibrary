@@ -64,13 +64,28 @@
         }
 
     .btn-group a:last-child {
-        margin-right: 0; /* Remove right margin from the last button to avoid unnecessary spacing */
+        margin-right: 0; 
+    }
+
+    .btn-info-custom {
+        background-color: #17a2b8;
+        color: #fff;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
     }
 </style>
 
 <div class="container-custom">
     <div class="header-custom">
         <h1>Authors</h1>
+    </div>
+
+    <div>
+        <a asp-action="Create" class="btn btn-info-custom m-4">Create New</a>
     </div>
 
     <table class="table table-striped table-bordered">

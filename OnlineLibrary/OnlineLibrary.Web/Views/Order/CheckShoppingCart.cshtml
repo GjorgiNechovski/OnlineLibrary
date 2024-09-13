@@ -49,19 +49,7 @@
             background-color: #117a8b;
         }
 
-    .btn-success-custom {
-        background-color: #28a745; /* Green color for Rent Books button */
-        color: #fff;
-        border-radius: 0.25rem;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-        text-decoration: none;
-    }
-
-        .btn-success-custom:hover {
-            background-color: #1e7e34; /* Darker shade for hover effect */
-        }
-
+    
     .btn-danger-custom {
         background-color: #ff6f61; /* Warning red for Delete button */
         color: #fff;
@@ -118,7 +106,7 @@
     @if (Model.member.IsStripedConnected)
     {
         <form asp-controller="Order" asp-action="RentBooks">
-            <input type="submit" value="Rent Books" class="btn btn-success-custom m-4"
+            <input type="submit" value="Rent Books" class="btn btn-info-custom m-4"
             @(Model.books.Count() == 0 ? "disabled" : "") />
         </form>
     }

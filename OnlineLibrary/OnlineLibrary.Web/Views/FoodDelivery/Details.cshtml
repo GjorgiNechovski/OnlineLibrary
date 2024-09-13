@@ -1,0 +1,42 @@
+﻿@model OnlineLibrary.Domain.FoodDeliveryDomain.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="card" style="border: 1px solid #007bff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="card-body" style="background-color: #f8f9fa; color: #333;">
+            <h5 class="card-title">Order by: @Model.Owner.FirstName @Model.Owner.LastName</h5>
+            <p>Address: @Model.address</p>
+            <p>Contact Phone: @Model.contactPhone</p>
+            <p>Total Price: @Model.totalPrice</p>
+
+            <h3>Dishes in Order</h3>
+            @if (Model.DishInOrders != null && Model.DishInOrders.Any())
+            {
+                <ul class="list-group">
+                    @foreach (var dish in Model.DishInOrders)
+                    {
+                        <li class="list-group-item" style="border: none; background-color: #f8f9fa;">
+                            <p><strong>Dish Name:</strong> @dish.OrderedDish.DishName</p>
+                            <p><strong>Ingredients:</strong> @dish.OrderedDish.DishIngredients</p>
+                            <p><strong>Category:</strong> @dish.OrderedDish.DishCategory</p>
+                            <p><strong>Price:</strong> @dish.OrderedDish.Price</p>
+                            <hr />
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No dishes in this order.</p>
+            }
+        </div>
+        <div class="card-footer" style="background-color: #007bff; color: #fff; text-align: center;">
+            <a asp-action="Index" class="btn" style="background-color: #6c757d; border: none; color: #fff;">Back to Orders</a>
+        </div>
+    </div>
+</div>

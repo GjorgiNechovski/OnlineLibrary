@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHR4u1XF7CEyUSKj/YmftyQAAAAACAAAAAAAQZgAAAAEAACAAAAANtAEMW19v17JEEdSFdSpFg/uNhHgu13zli5VGDWViuQAAAAAOgAAAAAIAACAAAAC5DGniDDZdGZB/R+ZtVfBCqvuGyjJPtVC5QZ1AjeIoD4AAAAD3EB19QbF5Hj9tAH0+BjyK1VUU/wHvTe7Oi0g75ykCPNkZnBy/29aCZ/6Xx0hNc76p6kphiCRJZTVFQbj787SwsAcUL7HAXR/BS9MeN9xNcw/9nhAxEeeVDcidd6K783K8pMaeKbtq91BrDyiFuAjv+9u3GgUcKJhsq1tjcwuIYkAAAACWwz/O4quSuczeZEJn7um48sHkX1XncU7YpoWrACtgQ4EysdCPTv131W9S9b6GO6WO+ss1qmp5BO4LlTljY6zF</EncryptedPassword>
+    <History>True|2024-09-07T20:26:42.3583325Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ApplicationDbContextConnection">
+      <Value>Data Source=onlinelibraryonlajnbiblioteka.database.windows.net,1433%3bInitial Catalog=OnlineLibrary.Web_db%3bUser ID=gjore123%3bPassword=onlajnbiblioteka123!</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=onlinelibraryonlajnbiblioteka.database.windows.net,1433%3bInitial Catalog=OnlineLibrary.Web_db%3bUser ID=gjore123%3bPassword=onlajnbiblioteka123!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="OnlineLibrary.Repository.Data.ApplicationDbContext">
+      <Value>Data Source=onlinelibraryonlajnbiblioteka.database.windows.net,1433%3bInitial Catalog=OnlineLibrary.Web_db%3bUser ID=gjore123%3bPassword=onlajnbiblioteka123!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
